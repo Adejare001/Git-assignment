@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="calculator" id="calculator">
+  <p class="label">Calculator</p>
+  <div class="display" id="display">
+    <div class="expression" id="expression"></div>
+    <div class="result" id="result">0</div>
+  </div>
+
+  <div class="buttons">
+    <!-- Row 1 -->
+    <button class="btn-clear" id="btn-ac"   onclick="clearAll()">AC</button>
+    <button class="btn-ce"    id="btn-ce"   onclick="clearEntry()">CE</button>
+    <button class="btn-pct"   id="btn-pct"  onclick="percent()">%</button>
+    <button class="btn-op"    id="btn-div"  onclick="operator('/')">÷</button>
+
+    <!-- Row 2 -->
+    <button class="btn-num"   id="btn-7"    onclick="digit('7')">7</button>
+    <button class="btn-num"   id="btn-8"    onclick="digit('8')">8</button>
+    <button class="btn-num"   id="btn-9"    onclick="digit('9')">9</button>
+    <button class="btn-op"    id="btn-mul"  onclick="operator('×')">×</button>
+
+    <!-- Row 3 -->
+    <button class="btn-num"   id="btn-4"    onclick="digit('4')">4</button>
+    <button class="btn-num"   id="btn-5"    onclick="digit('5')">5</button>
+    <button class="btn-num"   id="btn-6"    onclick="digit('6')">6</button>
+    <button class="btn-op"    id="btn-sub"  onclick="operator('-')">−</button>
+
+    <!-- Row 4 -->
+    <button class="btn-num"   id="btn-1"    onclick="digit('1')">1</button>
+    <button class="btn-num"   id="btn-2"    onclick="digit('2')">2</button>
+    <button class="btn-num"   id="btn-3"    onclick="digit('3')">3</button>
+    <button class="btn-op"    id="btn-add"  onclick="operator('+')">+</button>
+
+    <!-- Row 5 -->
+    <button class="btn-num btn-sign" id="btn-sign" onclick="toggleSign()">+/−</button>
+    <button class="btn-num btn-zero" id="btn-0"    onclick="digit('0')">0</button>
+    <button class="btn-num"          id="btn-dot"  onclick="decimal()">.</button>
+    <button class="btn-eq"           id="btn-eq"   onclick="calculate()">=</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
